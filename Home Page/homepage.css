@@ -2,6 +2,8 @@
 body {
     margin: 0;
 }
+
+/*Container CSS to set up the content on the page*/
 .cont {
     width: 100vw;
     margin-top: 5px;
@@ -31,6 +33,7 @@ body {
     padding-bottom: 1px;
     box-shadow: 0 4px 2px -2px #dcdcdc;
 }
+/*Logo Navgation Links*/
 .logo {
     margin: 0;
     color: #FF7F50;
@@ -41,23 +44,30 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.sinput {
-    border: 1px #d3d3d3 solid;
-    border-radius: 4px;
-    padding: 4px;
-}
-.nav-active {
-    color: orange !important;
+.navl {
+    width: 52%;
+    font-size: 10px;
 }
 .navbar a {
     text-decoration: none;
     padding-left: 5px ;
     color: grey;
 }
+.navl a:hover {
+    color: coral;
+}
+.nav-active {
+    color: orange !important;
+}
+/*Search Bar*/
+.sinput {
+    border: 1px #d3d3d3 solid;
+    border-radius: 4px;
+    padding: 4px;
+}
+/*Profile Button*/
 .pfbtn {
     border: 1px tomato solid;
-    /* background: darkorange;  */
-    /* color: darkorange; */
     background-image: url('images/cropped.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,25 +79,25 @@ body {
     display: none;
 }
 
-/* Header Body */
+/* Header Body Welcome Section*/
 .htitle {
     text-align: center;
 }
 .welc {
-    font-size: 2.25em;
+    font-size: 1.75em;
     color: grey;
-    margin-bottom: 0;
+    margin: 1%;
 }
 .wspan {
     color: #ff7f50;
 }
 .welc2 {
-    margin-top: 0vh;
+    margin: 1%;
     color: orange;
 }
 
 
-/* Sidebar/Buttons CSS */
+/* Sidebar CSS */
 .sidebar {
     display: flex;
     flex-direction: row;
@@ -101,6 +111,7 @@ body {
     box-shadow: 0 4px 2px -2px #dcdcdc;
     grid-area: sd;
 }
+/*Buttons for Edit Following and Explore*/
 .sblbtn {
     display: flex;
 }
@@ -112,7 +123,6 @@ body {
     color: white;
     border-radius: 10px;
 }
-
 .sbfollow:hover {
     background-color: coral;
     border: 2px coral solid;
@@ -121,7 +131,10 @@ body {
     background-color: coral;
     border: 2px coral solid;
 }
-
+/*Hide User Information in Mobile View*/
+.sduser {
+    display: none;
+}
 /* Archive Dropdown Menu*/
 .arch {
     display: flex;
@@ -152,9 +165,6 @@ body {
 .arch:hover .arclist {
     display: block;
 }
-.sduser {
-    display: none;
-}
 
 
 /* Main content Cards for Blog Posts*/
@@ -164,6 +174,7 @@ body {
     grid-auto-rows: minmax(211px, auto);
     grid-area: con;
     overflow: scroll;
+    margin: 1% 5px 0 5px;
 }
 .cont1 {
     margin-bottom: 8px;
@@ -176,7 +187,6 @@ body {
     border-radius: 10px 7px 7px 10px;
     border: 1px silver solid;
     height: 100%;
-    margin: 5px;
     box-shadow: 0 4px 2px -2px #dcdcdc;
 }
 /*Blog Image*/
@@ -268,6 +278,7 @@ body {
 .ctags {
     font-size: 10px;
     color: darkgrey;
+    margin: 5px auto 0px auto;
 }
 .dots {
     display: none;
@@ -276,10 +287,10 @@ body {
 
 /* Footer CSS */
 .footer {
-    background-color: gainsboro;
+    background-color: coral;
     grid-area: ft;
     font-size: 15px;
-    color: dimgrey;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,7 +302,10 @@ body {
 .socials a {
     font-size: 11px;
     text-decoration: none;
-    color: grey;
+    color: white;
+}
+.socials a:hover {
+    color: gold;
 }
 
 
@@ -300,7 +314,6 @@ body {
 @media (min-width: 600px) {
     /* for Tablet */
     .cont {
-        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
         display: grid;
         grid-template-columns: 160px 1fr;
         grid-template-rows: 20vh 75vh 5vh;
@@ -319,6 +332,7 @@ body {
     }
     .navl {
         display: flex;
+        font-size: 15px;
         justify-content: space-between;
         width: 60%;
         align-items: center;
@@ -337,6 +351,11 @@ body {
     .htitle {
         margin-top: 5%;
     }
+    .welc {
+        font-size: 2.25em;
+    }
+
+
     /*Sidebar changes*/
     .sidebar {
         display: grid;
@@ -357,6 +376,7 @@ body {
         border: 1px orange solid;
         margin: 6px 0px 0px 0px;
     }
+    /*Archive Drop Down Changes*/
     .arch {
         display: block;
         margin-right: 0;
@@ -401,7 +421,6 @@ body {
         border-radius: 50%;
         margin-left: 3%;
         border: 0 black solid;
-        /* background-color: orange; */
         background-image: url('images/cropped.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -425,7 +444,21 @@ body {
     }
 }
 
-
+@media (min-width: 1000px) {
+    /*Minor Changes to fit the Space Better*/
+    .cont {
+        grid-template-columns: 25vh 70vh 5vh;
+    }
+    .htitle {
+        margin-top: 3%;
+    }
+    .welc {
+        margin: auto;
+    }
+    .welc2 {
+        margin: auto;
+    }
+}
 
 
 @media (min-width: 768px) and (max-width: 1530px) {
@@ -442,14 +475,12 @@ body {
 @media (min-width: 768px) {
     /* for Desktop */
     .cont {
-        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
         display: grid;
         grid-template-columns: 260px 1fr;
-        grid-template-rows: 25vh 70vh 5vh;
-        /* grid-auto-rows: minmax(100px, auto); */
+        grid-template-rows: 15vh 80vh 5vh;
         grid-template-areas: "hr hr hr hr hr hr hr"
         "sd con con con con con con"
-        "ft ft ft ft ft ft ft"; 
+        "ft ft ft ft ft ft ft";
     }
     /*Navbar change*/
     .navlinks {
@@ -482,11 +513,11 @@ body {
     .content {
         display: grid;
         grid-template-columns: 33%;
-        /* grid-template-columns: repeat(5, 260px); */
         grid-auto-rows: minmax(211px, 260px);
         grid-template-areas: "one two three"
         "four five six"
         "seven eight nine";
+        grid-gap: 5px; 
     }
     #one {
         grid-area: one;
