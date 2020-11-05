@@ -4,7 +4,6 @@
 
 ```
 All HTML and CSS are created by me using the lessons from Udacity. 
-
 ```
 
 s
